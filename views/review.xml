@@ -1,0 +1,55 @@
+<odoo>
+    <!-- Vista árbol (list) -->
+    <record id="view_hotelsge_review_list" model="ir.ui.view">
+        <field name="name">hotelsge.review.list</field>
+        <field name="model">hotelsge.review</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="cliente_id"/>
+                <field name="reserva_id"/>
+                <field name="estrellas"/>
+                <field name="comentario"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista formulario (form) -->
+    <record id="view_hotelsge_review_form" model="ir.ui.view">
+        <field name="name">hotelsge.review.form</field>
+        <field name="model">hotelsge.review</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cliente_id" required="1"/>
+                        <field name="reserva_id" required="1" domain="[('cliente_id', '=', cliente_id)]"/>
+                        <field name="estrellas" widget="radio" required="1"/>
+                        <field name="comentario" required="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista búsqueda (search) -->
+    <record id="view_hotelsge_review_search" model="ir.ui.view">
+        <field name="name">hotelsge.review.search</field>
+        <field name="model">hotelsge.review</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cliente_id"/>
+                <field name="reserva_id"/>
+                <filter name="estrellas_5" string="Solo 5 estrellas" domain="[('estrellas', '=', '5')]"/>
+                <field name="comentario"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de ventana -->
+    <record id="action_hotelsge_review" model="ir.actions.act_window">
+        <field name="name">Valoraciones</field>
+        <field name="res_model">hotelsge.review</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hotelsge_review_search"/>
+    </record>
+</odoo>

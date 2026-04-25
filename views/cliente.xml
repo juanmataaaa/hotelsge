@@ -1,0 +1,32 @@
+<odoo>
+    <record id="view_cliente_tree" model="ir.ui.view">
+        <field name="name">hotelsge.cliente.tree</field>
+        <field name="model">hotelsge.cliente</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="telefono"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cliente_form" model="ir.ui.view">
+    <field name="name">hotelsge.cliente.form</field>
+    <field name="model">hotelsge.cliente</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <!-- Información principal del cliente -->
+                <group>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                </group>
+
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</odoo>

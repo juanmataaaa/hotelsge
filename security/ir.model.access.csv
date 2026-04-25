@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hotel_reserva,hotelsge.reserva,model_hotelsge_reserva,base.group_user,1,1,1,1
+access_hotel_cliente,hotelsge.cliente,model_hotelsge_cliente,base.group_user,1,1,1,1
+access_hotel_habitacion,hotelsge.habitacion,model_hotelsge_habitacion,base.group_user,1,1,1,1
+access_hotelsge_review_user,access.hotelsge.review.user,model_hotelsge_review,base.group_user,1,1,1,1

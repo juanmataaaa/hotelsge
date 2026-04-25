@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Menú raíz -->
+    <menuitem id="menu_hotel_sge_root" name="🏨 Hotel SGE" sequence="10"/>
+
+    <!-- Submenú de Reservas (principal arriba) -->
+    <menuitem id="menu_reserva" name="Reservas" parent="menu_hotel_sge_root" action="action_reserva" sequence="10"/>
+
+    <!-- Submenú de Valoraciones (principal arriba, junto a Reservas) -->
+    <menuitem id="menu_valoraciones" name="Valoraciones" parent="menu_hotel_sge_root" action="action_hotelsge_review" sequence="30"/>
+
+    <!-- Submenú Gestión -->
+    <menuitem id="menu_gestion" name="Gestión" parent="menu_hotel_sge_root" sequence="20"/>
+    <menuitem id="menu_cliente" name="Clientes" parent="menu_gestion" action="action_cliente" sequence="10"/>
+    <menuitem id="menu_habitacion" name="Habitaciones" parent="menu_gestion" action="action_habitacion" sequence="20"/>
+</odoo>

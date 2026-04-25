@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Acciones -->
+   <record id="action_reserva" model="ir.actions.act_window">
+    <field name="name">Reservas</field>
+    <field name="res_model">hotelsge.reserva</field>
+    <field name="view_mode">list,form,calendar</field>
+</record>
+
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">hotelsge.cliente</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_habitacion" model="ir.actions.act_window">
+        <field name="name">Habitaciones</field>
+        <field name="res_model">hotelsge.habitacion</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_habitacion_search"/>
+    </record>
+    <record id="action_hotelsge_review" model="ir.actions.act_window">
+        <field name="name">Valoraciones</field>
+        <field name="res_model">hotelsge.review</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_hotelsge_review_search"/>
+    </record>
+
+</odoo>

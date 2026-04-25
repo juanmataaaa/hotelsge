@@ -1,0 +1,47 @@
+<odoo>
+    <record id="view_habitacion_tree" model="ir.ui.view">
+        <field name="name">hotelsge.habitacion.tree</field>
+        <field name="model">hotelsge.habitacion</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="tipo"/>
+                <field name="estado"/>
+                <field name="precio_noche"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_habitacion_form" model="ir.ui.view">
+        <field name="name">hotelsge.habitacion.form</field>
+        <field name="model">hotelsge.habitacion</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="tipo"/>
+                        <field name="estado"/>
+                        <field name="precio_noche"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_habitacion_search" model="ir.ui.view">
+    <field name="name">hotelsge.habitacion.search</field>
+    <field name="model">hotelsge.habitacion</field>
+    <field name="arch" type="xml">
+        <search string="Buscar habitaciones">
+            <field name="name"/>
+            <field name="tipo"/>
+            <field name="estado"/>
+            <filter name="precio_mayor_50" string="Precio &gt; 50" domain="[('precio_noche','&gt;',50)]"/>
+            <filter name="precio_menor_100" string="Precio &lt; 100" domain="[('precio_noche','&lt;',100)]"/>
+            <filter name="estado_disponible" string="Disponible" domain="[('estado','=','disponible')]"/>
+        </search>
+    </field>
+</record>
+
+</odoo>
